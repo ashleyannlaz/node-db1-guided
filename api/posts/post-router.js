@@ -24,7 +24,6 @@ function checkPayload(req, res, next) {
     next();
   }else{
     res.status(400).json({message:"title and contents required"})
-
   }
 }
 
