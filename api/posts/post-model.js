@@ -13,8 +13,8 @@ async function get() {
   //.select("contents").limit(3)
 }
 
-async function getById() {
-  return      //SELECT * FROM posts WHERE id = someid
+async function getById(id) {
+  return db("posts").where("id",id)     //SELECT * FROM posts WHERE id = someid
 }
 
 async function create() {
