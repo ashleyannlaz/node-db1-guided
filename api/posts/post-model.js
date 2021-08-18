@@ -9,7 +9,7 @@ module.exports = {
 }
 
 async function get() {
-  return db("posts")  //SELECT * FROM posts 
+  return db("posts").limit(3)  //SELECT * FROM posts 
   //.select("contents")
 }
 
