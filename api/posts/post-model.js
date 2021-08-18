@@ -17,8 +17,8 @@ async function getById(id) {
   return db("posts").where("id",id).first()     //SELECT * FROM posts WHERE id = someid
 }
 
-async function create() {
-  return 'create wired'
+async function create({title, contents}) {
+  const [id] =  await db("posts").insert({title,contents})
 }
 
 async function update() {
