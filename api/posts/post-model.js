@@ -9,8 +9,8 @@ module.exports = {
 }
 
 async function get() {
-  return db("posts").limit(3)  //SELECT * FROM posts 
-  //.select("contents")
+  return db("posts")  //SELECT * FROM posts 
+  //.select("contents").limit(3)
 }
 
 async function getById() {
