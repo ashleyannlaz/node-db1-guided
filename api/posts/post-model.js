@@ -14,7 +14,7 @@ async function get() {
 }
 
 async function getById() {
-  return 'getById wired'
+  return      //SELECT * FROM posts WHERE id = someid
 }
 
 async function create() {
