@@ -14,7 +14,7 @@ async function get() {
 }
 
 async function getById(id) {
-  return db("posts").where("id",id)     //SELECT * FROM posts WHERE id = someid
+  return db("posts").where("id",id).first()     //SELECT * FROM posts WHERE id = someid
 }
 
 async function create() {
