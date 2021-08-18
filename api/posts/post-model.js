@@ -27,6 +27,8 @@ async function update(id,{title,contents}) {
   return getById(id)
 }
 
-async function remove() {
-  return 'delete wired'
+async function remove(id) {
+  const deletedPost = await getById(id)
+  await db("posts").where("id",id).delete()
+  return deletedPost
 }
